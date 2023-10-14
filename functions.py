@@ -6,6 +6,7 @@ def keyboard_generate(menu):
     keyboard = types.InlineKeyboardMarkup()
     #breakfast_button = types.InlineKeyboardButton("Завтрак", callback_data="breakfast_button")
     for index, food in enumerate(menu):
+        print(food[0])
         keyboard.add(types.InlineKeyboardButton(food[1] + " - " + str(food[3]), callback_data=f"food{food[0]}"))
         print(f"food{food[0]}")
     return keyboard
